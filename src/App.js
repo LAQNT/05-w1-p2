@@ -1,22 +1,19 @@
 import './App.css';
-import MyNavbar from './MyNavbar';
-import MyFooter from './MyFooter';
-import MyJumbotron from './MyJumbotron';
-import MyLatestRelease from './MyLatestRelease';
-// import MyBookCard from './MyBookcard';
+import MyNavbar from './components/MyNavbar';
+import MyFooter from './components/MyFooter';
+import MyJumbotron from './components/MyJumbotron';
+import MyLatestRelease from './components/MyLatestRelease';
+
 
 function App() {
   return (
     <>
-      <MyNavbar/>
-      <MyJumbotron/>
-      <MyLatestRelease/>
-      <MyFooter/>
+      <MyNavbar />
+      <MyJumbotron />
+      <MyLatestRelease />
+      <MyFooter /> 
     </>
-
   )
-  
-  
 }
 
 export default App;
