@@ -1,8 +1,7 @@
-import React, { useState }  from 'react';
+import React, {useState}  from 'react';
 import data from './data/history.json';
 import DataBooks from './DataBooks';
 import Input from './Input';
-
 
 
 function MyLatestRelease() {
@@ -16,7 +15,7 @@ function MyLatestRelease() {
         <>
             <Input onInputChange={handleInputChange} />  
 
-            <div className="container books-container mt-5">
+            <div className="container books-container mt-2">
                 <h3>Latest Releases</h3>   
 
                 <div className="row gy-4 " >

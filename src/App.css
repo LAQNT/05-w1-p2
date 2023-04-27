@@ -19,24 +19,49 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: space-between;
 
 }
 
 .jumbotron p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
   color: #e3ffe8;
-  margin-bottom: 0;
-  /* padding: .5rem; */
+  margin-bottom: .5rem;
 }
 
 .jumbotron span {
   color: #e2fc7c;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 17rem;
+  justify-self: center;
+  margin: auto; 
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
 
 }
+
+.box span {
+  font-size: .75rem;
+}
+
+.box p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+
 
 .books-container {
   margin-bottom: 6rem;
@@ -52,8 +77,8 @@ body {
 
 .card {
   background-color: #f4f4f4;
-  overflow: hidden;
 }
+
 .card img {
   height: 15rem;
   object-fit:contain;
@@ -66,18 +91,17 @@ body {
   justify-content: space-between;
   gap: .8rem;
   text-transform: capitalize;
-  height: 10rem;
+  height: 12rem;
 
-  overflow: hidden;
   border-top: solid 1px rgb(217, 217, 217);
 }
 
-.card-body div{
+.card-body div:first-of-type{
   display: flex;
   flex-direction: column;
 }
 
-.card-body div span:first-of-type {
+.card-body div:first-of-type span:first-of-type {
   font-size: .75rem;
   color: gray;
 }
@@ -95,33 +119,28 @@ body {
   /* white-space: pre-wrap; */
 }
 
-.card-body span:first-of-type{
+.card-body > span:first-of-type{
   font-size: .8rem;
   font-weight: 400;
-
 }
-
-
 
 .price-cart {
   display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: space-between;
-
 }
 
 .price-cart button {
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  text-align: center;
 }
 
-.price-cart span {
-  font-size: 1rem;
+.price-cart > span {
+  font-size: 1.2rem;
   font-weight: 600;
+  align-self: center;
 }
 
+/* ------footer----- */
 .footer {
   background-color: #538d6d;
   position: relative;
