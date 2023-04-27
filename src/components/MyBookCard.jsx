@@ -1,3 +1,7 @@
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+
+
 
 function MyBookCard(props) {
     return (
@@ -10,7 +14,11 @@ function MyBookCard(props) {
                             <span>id: {props.asin}</span>
                         </div>
                         <span>Category: {props.category}</span>
-                        <span>€ {props.price}</span>
+                        <div className='price-cart'>
+                            <span>€ {props.price}</span>
+                            
+                            <Button variant="dark"><i class="bi bi-cart2"></i></Button>
+                        </div>
                     </div>
 
             </div>
