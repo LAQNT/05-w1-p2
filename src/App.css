@@ -91,7 +91,7 @@ body {
   justify-content: space-between;
   gap: .8rem;
   text-transform: capitalize;
-  height: 12rem;
+  /* height: 12rem; */
 
   border-top: solid 1px rgb(217, 217, 217);
 }
