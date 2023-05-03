@@ -1,10 +1,5 @@
 import React, {useState} from 'react';
 import MyBookCard from './MyBookCard';
-// import Input from './Input';
-
-
-
-
 
 function DataBooks({inputValue, data}) {
     
@@ -25,16 +20,11 @@ function DataBooks({inputValue, data}) {
     // console.log(data);
     return(
         filteredData.map(book => (
-            <MyBookCard asin={book.asin} title={book.title} img={book.img} price={book.price} category={book.category} />
-        ))
-
-        
+            <MyBookCard key={book.asin} title={book.title} img={book.img} price={book.price} category={book.category} />
+        ))      
     );
 
 }
-
-
-
 
 export default DataBooks;
 

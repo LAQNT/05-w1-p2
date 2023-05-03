@@ -6,36 +6,51 @@ import CommentArea from "./CommentArea";
 
 function MyBookCard(props) {
     const [isActive, setIsActive] = useState(false);
+    const [showDiv, setShowDiv] = useState(false);
 
     const handleClick = () => {
         setIsActive(isActive => !isActive);
-    }
+        setShowDiv(!showDiv);
+    };
+    const handleClickRev = () => {
+        // setIsActive(isActive => !isActive);
+        // setShowDiv(!showDiv);
+    };
 
     return (
-        <div className="col-6  col-sm-6 col-md-4 col-lg-3 col-xl-2" >
+        <div className="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" >
             <div 
             className="card" 
-            onClick={handleClick}
             style={{
                 backgroundColor: isActive ? 'rgba(255,255,255)' : '',
-                // border: isActive ? 'white' : '', 
-                boxShadow: isActive ? '.3rem .4rem .3rem rgba(150,150,150)' : '', 
+                boxShadow: isActive ? '.3rem .4rem .3rem rgba(150,150,150)' : '',
+                cursor: 'pointer' 
             }}>
-                    <img src={props.img}  alt={props.title}/>
-                    <div    className="card-body px-4 py-3">
-                        <div>
+                    <img 
+                    src={props.img} 
+                    onClick={handleClick} 
+                    alt={props.title}/>
+                    <div  
+                     className="card-body px-4 py-3"
+                     >
+                     
+                        <div onClick={handleClick} >
                             <h5>{props.title}</h5>
-                            <span>id: {props.asin}</span>
+                            <span>id: {props.key}</span>
                         </div>
                         <span>Category: {props.category}</span>
                         <div className='price-cart'>
                             <span>€ {props.price}</span>     
-                            <Button variant="dark"><i class="bi bi-cart2"></i></Button>
+                            <Button variant="dark"><i className="bi bi-cart2"></i></Button>
                         </div>
-                        <div>
-                            <span >Reviews</span>
+                        
+                        <div className='reviews'>
+                        <span onClick={handleClick} > Reviews ▾ </span>
+                        {showDiv && <div>
                             <CommentArea />                            
+                            </div>}
                         </div>
+                        
                     </div>
 
             </div>

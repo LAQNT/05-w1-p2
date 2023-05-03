@@ -19,7 +19,7 @@ function Input({onInputChange}) {
                     aria-describedby="basic-addon2"
                     onChange={onInputChange}
                     />
-                    <InputGroup.Text    id="basic-addon2"><i   class="bi bi-search" style=  {{ fontSize: 15 }} ></i></  InputGroup.Text>
+                    <InputGroup.Text    id="basic-addon2"><i   className="bi bi-search" style=  {{ fontSize: 15 }} ></i></  InputGroup.Text>
                 </InputGroup>
                 </div>
             </div>
