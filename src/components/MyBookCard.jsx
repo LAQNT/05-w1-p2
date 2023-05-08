@@ -23,6 +23,7 @@ function MyBookCard(props) {
             className="card" 
             style={{
                 backgroundColor: isActive ? 'rgba(255,255,255)' : '',
+                border: isActive ? '.5px solid red' : '' ,
                 boxShadow: isActive ? '.3rem .4rem .3rem rgba(150,150,150)' : '',
                 cursor: 'pointer' 
             }}>
@@ -36,7 +37,7 @@ function MyBookCard(props) {
                      
                         <div onClick={handleClick} >
                             <h5>{props.title}</h5>
-                            <span>id: {props.key}</span>
+                            <span>id: {props.asin}</span>
                         </div>
                         <span>Category: {props.category}</span>
                         <div className='price-cart'>
@@ -45,7 +46,14 @@ function MyBookCard(props) {
                         </div>
                         
                         <div className='reviews'>
-                        <span onClick={handleClick} > Reviews ▾ </span>
+                        <p onClick={handleClick} > Reviews 
+                            <span  style={{
+                                    display: isActive ? 'none' : '',}} > ▾</span> 
+                            <span  style={{
+                                    display: isActive ? '' : 'none',}} > ▴</span> 
+                            
+                            
+                            </p>
                         {showDiv && <div>
                             <CommentArea />                            
                             </div>}

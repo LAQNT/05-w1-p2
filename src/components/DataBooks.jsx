@@ -17,10 +17,10 @@ function DataBooks({inputValue, data}) {
     }, [data, inputValue])
 
 
-    // console.log(data);
+
     return(
         filteredData.map(book => (
-            <MyBookCard key={book.asin} title={book.title} img={book.img} price={book.price} category={book.category} />
+            <MyBookCard asin={book.asin} title={book.title} img={book.img} price={book.price} category={book.category} />
         ))      
     );
 
