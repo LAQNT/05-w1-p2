@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
 
 const Timer = () => {
   const [days, setDays] = useState(0);
@@ -26,33 +26,31 @@ const Timer = () => {
 
   return (
     <div className="timer row">
-         <div className="col">
-           <div className="box">
-             <p id="day">{days < 10 ? "0" + days : days}</p>
-             <span className="text">Days</span>
-           </div>
-         </div>
-         <div className="col">
-           <div className="box">
-             <p id="hour">{hours < 10 ? "0" + hours : hours}</p>
-             <span className="text">Hours</span>
-           </div>
-         </div>
-         <div className="col">
-           <div className="box">
-             <p id="minute">{minutes < 10 ? "0" + minutes :     minutes}</p>
-             <span className="text">Minutes</span>
-           </div>
-         </div>
-         <div className="col">
-           <div className="box">
-             <p id="second">{seconds < 10 ? "0" + seconds :     seconds}</p>
-             <span className="text">Seconds</span>
-           </div>
-         </div>
+      <div className="col">
+        <div className="box">
+          <p id="day">{days < 10 ? "0" + days : days}</p>
+          <span className="text">Days</span>
+        </div>
+      </div>
+      <div className="col">
+        <div className="box">
+          <p id="hour">{hours < 10 ? "0" + hours : hours}</p>
+          <span className="text">Hours</span>
+        </div>
+      </div>
+      <div className="col">
+        <div className="box">
+          <p id="minute">{minutes < 10 ? "0" + minutes : minutes}</p>
+          <span className="text">Minutes</span>
+        </div>
+      </div>
+      <div className="col">
+        <div className="box">
+          <p id="second">{seconds < 10 ? "0" + seconds : seconds}</p>
+          <span className="text">Seconds</span>
+        </div>
+      </div>
     </div>
-
-
   );
 };
 

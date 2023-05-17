@@ -17,8 +17,8 @@ function CommentList() {
     
           const json = await response.json();
           setData(json);
-      }
-      console.log(data)
+        }
+        console.log(data)
 
 
     return(

@@ -1,13 +1,15 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className='nav-bar'>
+    <Navbar expand="lg" className="nav-bar" href="#top">
       <Container>
-        <Navbar.Brand href="#home">Book Shop</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <i class="bi bi-book-half"></i> Book Shop
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
